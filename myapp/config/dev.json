@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "name": "Project Name - Dev Mode",
+    "port": 4100,
+    "mode": "dev",
+    "protocol": "http",
+    "serverUrl": "localhost",
+    "serverUrlWebUrlLink": "localhost:4200/",
+    "database": {
+      "multipleStatements": true,
+      "host": "localhost",
+      "user": "root",
+      "password": "12345",
+      "database": "procrew"
+    },
+    "email": {
+      "host": "",
+      "port": "",
+      "username": "",
+      "password": ""
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=dev nodemon --inspect=5001 --config nodemon.js  src/server.js",
+    "staging": "NODE_ENV=staging  nodemon --inspect=5001 --config nodemon.js src/server.js",
+    "production": "NODE_ENV=production  nodemon --inspect=5001 --config nodemon.js src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.6.0",
+    "async": "3.2.0",
+    "body-parser": "1.19.0",
+    "chalk": "4.1.0",
+    "commander": "^6.2.0",
+    "config": "3.3.1",
+    "cors": "2.8.5",
+    "ejs": "3.1.3",
+    "eslint-config-airbnb": "18.2.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "express-generator": "^4.16.1",
+    "express-status-monitor": "^1.3.3",
+    "express-validator": "6.6.0",
+    "glob": "7.1.6",
+    "install": "^0.13.0",
+    "jsonwebtoken": "8.5.1",
+    "knex": "^0.21.12",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.10.17",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "nodemailer": "6.4.10",
+    "pg-promise": "^10.8.0",
+    "sequelize": "^6.3.5"
+  }
+}
