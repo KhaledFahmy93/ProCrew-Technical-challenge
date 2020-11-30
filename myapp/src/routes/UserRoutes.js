@@ -5,16 +5,11 @@ const RouteConstant = require('../constant/Routes');
 const Validation = require('../validation/UserValidation')
 
 module.exports = (app) => {
-  router.route('/create')
+  router.route('/user')
     .post(
       Validation.create(),
       UserController.createUser
     );
-  
-  // router.route('/queue')
-  //   .get(
-  //     userService.getcount
-  //   );
     
   app.use(
     RouteConstant.USER,

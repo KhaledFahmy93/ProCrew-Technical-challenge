@@ -1,7 +1,4 @@
-const UserProfileServices = require('../services/UserServices');
 const { validationResult } = require('express-validator');
-const amqp = require('amqplib/callback_api');
-const CONN_URL = 'amqp://localhost';
 const {publishToQueue}  =  require('../services/MQService');
 const configuration = require('../../knexfile')['dev'];
 const knex = require('knex')(configuration);
@@ -21,7 +18,7 @@ module.exports = {
 			const user = knex('users').insert({
 				name : req.body.name  , email : req.body.email , phone : req.body.phone
 			});
-			res.status(201).send("added successfully to queue");
+			res.status(200).send({'data' : "added successfully to queue" , 'success' :true , 'status':200 });
 		} catch (error) {
 			console.error(error);
 			res.status(502).send("Error")
